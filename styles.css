@@ -2,4 +2,251 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: arial;
+}
+
+:root {
+    --white: white;
+    --darkGrey: rgb(32, 32, 32);
+    --lightGrey: rgb(170, 170, 170);
+    --borderColor: #373737;
+    --userColor: green;
+    --bgColor: #181818;
+}
+
+/* START */
+
+/* NAVIGATION */
+
+.nav-container, .burger-logo, .action-icons, .logo {
+    display: flex;
+    align-items: center;
+}
+
+.burger-logo i:hover {
+    cursor: pointer;
+}
+
+nav {
+    background-color: var(--darkGrey);
+    border-top: 1px var(--borderColor) solid;
+    border-bottom: 1px var(--borderColor) solid;
+    width: 100vw;
+    position: fixed;
+}
+
+.nav-container {
+    height: 4rem;
+    color: var(--white);
+    justify-content: space-between;
+}
+
+.burger-logo {
+    width: 200px;
+    justify-content: space-evenly;
+}
+
+.burger-logo i {
+    font-size: 1.25rem;
+    /* padding: 0 1.5rem; */
+}
+
+.logo img {
+    width: 100px;
+}
+
+.logo span {
+    color: var(--lightGrey);
+    font-size: 0.75rem;
+    padding-left: 4px;
+    transform: translateY(-0.5rem);
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+/* ICONS */
+
+.fa-magnifying-glass {
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+.fa-magnifying-glass::after {
+    content: "Search";
+    text-transform: capitalize;
+    font-family: arial;
+    font-weight: 100;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -1rem;
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+    animation-fill-mode: backwards;
+}
+
+.fa-magnifying-glass:hover::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.fa-microphone {
+    position: relative;
+}
+
+.fa-microphone::after {
+    content: "Search with your voice";
+    text-transform: capitalize;
+    font-family: arial;
+    width: 130px;
+    font-weight: 100;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -3.9rem;
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+    animation-fill-mode: backwards;
+}
+
+.fa-microphone:hover::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.fa-circle-plus {
+    position: relative;
+}
+
+.fa-circle-plus::after {
+    content: "Create";
+    text-transform: capitalize;
+    font-family: arial;
+    /* width: 130px; */
+    font-weight: 100;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -1rem;
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+    animation-fill-mode: backwards;
+}
+
+.fa-circle-plus:hover::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.fa-grip {
+    position: relative;
+}
+
+.fa-grip::after {
+    content: "YouTube Apps";
+    text-transform: capitalize;
+    font-family: arial;
+    width: 80px;
+    font-weight: 100;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -2.3rem;
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+    animation-fill-mode: backwards;
+}
+
+.fa-grip:hover::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.fa-bell {
+    position: relative;
+}
+
+.fa-bell::after {
+    content: "Notifications";
+    text-transform: capitalize;
+    font-family: arial;
+    /* width: 80px; */
+    font-weight: 100;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -2rem;
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+    animation-fill-mode: backwards;
+}
+
+.fa-bell:hover::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+/* /ICONS  */
+
+.action-icons {
+    font-size: 1.25rem;
+    gap: 1rem;
+}
+
+.action-icons i:hover {
+    cursor: pointer;
+}
+
+.action-icons div:hover {
+    cursor: pointer;
+}
+
+.logged-user {
+    font-weight: bold;
+    background-color: var(--userColor);
+    border-radius: 50%;
+    padding: 1.25rem 1.25rem;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.logged-user::before {
+    content: "T";
+    position: absolute;
+    left: 32%;
+    top: 25%;
+}
+
+/*  */
+
+main {
+    background-color: var(--bgColor);
+    height: 100vh;
 }
