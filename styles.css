@@ -10,6 +10,8 @@
     --darkGrey: rgb(32, 32, 32);
     --lightGrey: rgb(170, 170, 170);
     --borderColor: #373737;
+    --searchColor: #313131;
+    --microphoneColor: #181818;
     --userColor: green;
     --bgColor: #181818;
 }
@@ -42,7 +44,7 @@ nav {
 }
 
 .burger-logo {
-    width: 200px;
+    min-width: 200px;
     justify-content: space-evenly;
 }
 
@@ -249,4 +251,68 @@ nav {
 main {
     background-color: var(--bgColor);
     height: 100vh;
+}
+
+
+/*  */
+
+.search-box {
+    width: 700px;
+    height: 45px;
+    align-items: center;
+    position: relative;
+    padding-left: 3rem;
+    display: none;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    /* padding: 12px; */
+    resize: vertical;
+    border: 1px var(--searchColor) solid;
+    background-color: var(--bgColor);
+    padding-left: .5rem;
+    font-size: 1.25rem;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box .search-icon {
+    display: flex;
+    align-items: center;
+    background-color: var(--searchColor);
+    padding: 0 1.5rem;
+    height: 100%;
+}
+
+.search-box .fa-magnifying-glass {
+    font-size: 1.25rem;
+}
+
+.search-box .fa-microphone {
+    display: inline-block;
+    background-color: var(--microphoneColor);
+    font-size: 1.25rem;
+    border-radius: 60px;
+    padding: 0.5em 0.6em;
+    margin-left: 1rem;
+}
+
+/*  */
+
+@media screen and (min-width: 658px) {
+    .action-icons .fa-magnifying-glass {
+        visibility: hidden;
+    }
+
+    .action-icons .fa-microphone {
+        visibility: hidden;
+    }
+
+    .search-box {
+        display: flex;
+    }
 }
